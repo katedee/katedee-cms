@@ -199,7 +199,7 @@ video {
   width: 60%;
   max-width: 538px; }
 .content2 .sign-up {
-  padding: 2%;
+  padding: 7% 2%;
   background: url("img/wavebg.png"); }
 .content2 .features-list, .content2 .video-wrap {
   float: left;
@@ -296,8 +296,8 @@ video {
     border-bottom: 1px solid #a3bfb7; }
   .features .video-wrap {
     padding-bottom: 52.25%;
-    margin-left: 0; } }
-@media (max-width: 760px) {
+    margin-left: 0; }
+
   .content3 {
     padding: 7% 0 20% 0; }
     .content3 .blurb {
@@ -307,6 +307,10 @@ video {
       .content3 .blurb:last-of-type {
         margin: 0 auto 0 auto; } }
 @media (max-width: 500px) {
+  .content.content1 h2 {
+    margin: 2.6% 0 0 0;
+    font-size: 3.3rem; }
+
   .content4 .phone img {
     width: 50%;
     right: 50%; }
