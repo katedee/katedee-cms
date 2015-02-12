@@ -158,7 +158,7 @@ video {
 .main-bg {
   width: 100%; }
   .main-bg.main-bg1 {
-    background: url("img/dragon.png") no-repeat;
+    background: url("img/dragon.png") no-repeat fixed;
     background-size: cover; }
   .main-bg.main-bg3 {
     background-color: #fff; }
