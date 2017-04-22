@@ -1,0 +1,323 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+@import "reset";
+
+// import bootstrap
+@import "bootstrap";
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+@import "variables";
+
+@import "mixins";
+
+/**************/
+/* BASE RULES */
+/**************/
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+	background: $white;
+  font: 18px/1.4 $open-sans;
+  color: $darkGray;
+  min-height: 100%;
+  position: relative;
+}
+
+.container-fluid {
+  padding-bottom: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings;
+  color: $purple;
+  font-weight: bold;
+
+  line-height: 1.4;
+  margin: 3rem 0 5px;
+  padding: 0;
+
+  + p {
+    margin-top: 0 !important;
+  }
+
+  @include sm-and-up {
+    line-height: 1.7;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: $darkGray;
+  text-decoration: none;
+	cursor: pointer;
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
+}
+
+// Specify the color of the selection
+::-moz-selection {
+  color: $black;
+  background: $pink;
+}
+::selection {
+  color: $black;
+  background: $pink;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+
+//
+// .masthead
+//
+
+.wrapper-masthead {
+  margin-bottom: 50px;
+}
+
+.masthead {
+  padding: 20px 0;
+  text-align: center;
+
+  @include sm-and-up {
+    a {
+      display: block;
+    }
+  }
+
+}
+
+.heading--header {
+  line-height: 1;
+  display: none;
+
+  @include sm-and-up {
+    font-size: 50px;
+    text-align: right;
+    margin-top:3.125rem;
+    display: block;
+  }
+}
+
+.heading--header-mobile {
+  line-height: 1;
+  display: block;
+
+  @include sm-and-up {
+    display: none;
+  }
+}
+
+nav {
+  float: none;
+  margin-top: 9px;
+  display: block;
+  font-size: 16px;
+
+  @include sm-and-up {
+    float: right;
+    margin-top: 23px; 
+    font-weight: lighter;
+    font-size: 18px;
+  }
+
+  a {
+    margin: 0 10px;
+    color: $blue;
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    &:hover, &:active {
+      color: $blue;
+    }
+
+    @include sm-and-up {
+      color: $darkGray;
+      margin-left: 20px;
+    }
+
+  }
+
+
+}
+
+//
+// .main
+//
+
+.main {
+  a {
+    border-bottom: 3px solid $teal;
+    box-shadow: inset 0 -4px 0 $teal;
+
+    &:hover, &:focus, &:active {
+      background: $teal;
+    }
+  }
+}
+
+ .heading--gradient {
+    background: -webkit-linear-gradient(bottom, $purple, $teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio__item {
+
+  &:hover .portfolio__item-image {
+    background: -moz-linear-gradient(top, rgba($purple,0) 0%, rgba($purple,0.65) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($purple,0.65)), color-stop(100%,rgba($purple,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  img {
+    z-index: -1;
+    position: relative;
+    display: block;
+  }
+
+  &:hover, &:focus, &:active {
+    opacity: 0.7;
+  }
+}
+
+.wrapper-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  padding: 20px 0 10px 0;
+  color: $med-gray;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+
+.post--single {
+  position: relative;
+}
+
+.post--single__details {
+  @include sm-and-up {
+    padding-top: calc(3.125rem + 20px);
+  }
+
+  @include md-and-up {
+    position: fixed;
+    right: 0;
+  }
+}
+
+.page {
+  @include sm-and-up {
+    padding-top: calc(3.125rem + 20px);
+  }
+
+  .heading--gradient {
+    margin-top: 0;
+  }
+}
+
+/* fluid 4 columns */
+.grid-sizer,
+.grid-item { width: 25%; float: left; }
+/* 2 columns */
+.grid-item--width2 { width: 40%; }

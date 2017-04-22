@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<article class="post post--single row">
+
+  <div class="col-sm-5 col-sm-push-6 col-md-push-0 post--single__details">
+    <div class="PageNavigation">
+      {% if page.previous.url %}
+        <a class="prev" href="{{page.previous.url}}">&larr;prev</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="next" href="{{page.next.url}}">&rarr;next</a>
+      {% endif %}
+    </div>
+
+    <h1 class="heading--gradient">{{ page.title }}</h1>
+
+    <div class="entry">
+      {{ content }}
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-sm-pull-5 col-md-pull-0">
+    <div class="images">
+      {% for image in page.images %}
+        <img src="{{ image.url }}" alt="{{ image.alt }}"/>
+      {% endfor %}
+    </div>
+  </div>
+
+  
+
+  <!--<div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>-->
+
+  <!--{% include disqus.html %}-->
+</article>

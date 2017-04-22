@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="gallery-page grid clearfix">
+    <div class="grid-sizer"></div>
+  {% for post in site.posts %}
+    {% for category in post.categories %}
+        {% if category == page.category %}
+            <div class="portfolio__item grid-item">
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <div class="portfolio__item-image">
+                        <img src="{{ post.thumbnail }}"/>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>

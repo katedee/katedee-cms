@@ -1,0 +1,39 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+
+$teal: #17e1e3;
+$purple: #3C225F;
+$pink: #9a5780;
+
+$blue: $teal;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$med-gray: #999;
+$lightGray: #eee;
+$white: #fff;
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+
+$comforta: 'Comfortaa', cursive, serif;
+$open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
+$abril: 'Abril Fatface', cursive, serif;
+
+$headings: $abril;
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

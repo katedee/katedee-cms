@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body id="page-top" class="index">
-    {% include nav.html %}
-    {% include header.html %}
-    {% include portfolio_grid.html %}
-    {% include about.html %}
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    {% if site.contact == "static" %}
-    {% include contact_static.html %}
-    {% elsif site.contact == "disqus" %}
-    {% include contact_disqus.html %}
-    {% else %}
-    {% include contact.html %}
-    {% endif %}
+    {% include meta.html %}
 
-    {% include footer.html %}
-    {% include modals.html %}
-    {% include js.html %}
-    </body>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Comfortaa:400,700|Open+Sans:300,400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="wrapper-masthead">
+              <header class="masthead clearfix">
+                  <h1 class="heading--gradient heading--header">Kate<br/> Dee</h1>
+                  <h1 class="heading--gradient heading--header-mobile">K D</h1>
+                  <nav>
+                  <a href="{{ site.baseurl }}/">Home</a>
+                  <a href="{{ site.baseurl }}/comics">Comics</a>
+                  <a href="{{ site.baseurl }}/illustration">Illustration</a>
+                  <!--<a href="{{ site.baseurl }}/web">Web</a>-->
+                  <a href="{{ site.baseurl }}/about">About</a>
+                  <a href="http://{{ site.footer-links.tumblr }}.tumblr.com" target="_blank">Blog</a>
+                </nav>
+              </header>
+          </div>
+        </div>
+
+        <div role="main" class="main clearfix col-sm-10">
+            {{ content }}
+        </div>
+      </div>
+
+      <div class="wrapper-footer row">
+          <footer class="footer col-sm-12">
+            <span>All images &copy; Kate Dee. Please do not use without permission.</span>
+          </footer>
+      </div>
+    </div> <!--container-fluid-->
+
+    {% include analytics.html %}
+  </body>
+  {% include js.html %}
 </html>
