@@ -1,13 +1,6 @@
 ---
 ---
-
-//
-// IMPORTS
-//
-
 @import "reset";
-
-// import bootstrap
 @import "bootstrap";
 
 .clearfix:before,
@@ -22,7 +15,6 @@
 
 
 @import "variables";
-
 @import "mixins";
 
 /**************/
@@ -142,26 +134,9 @@ img {
   background: $pink;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-
-//
-// .masthead
-//
-
 .wrapper-masthead {
   margin-bottom: 50px;
 }
@@ -325,3 +300,5 @@ footer {
 .tumblr-post {
   margin-bottom: 20%;
 }
+
+@import "rpg";
