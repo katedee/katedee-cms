@@ -2,63 +2,64 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Anonymous Pro', sans-serif;
-  font-weight: 700;
-}
-
-h3 + h4 {
-    margin-top: 0;
-}
-
-.rpg-masthead__title {
-    margin-top: 0;
-}
-
-header.rpg-masthead {
-    border-bottom: 1px solid $grey-color-light;
-}
-
-.rpg-masthead__nav,
-.rpg-masthead__title {
- float: left;
- margin-left: 1rem;
-}
-
-.rpg-masthead__nav {
-    padding-top: 1rem;
-}
-
-#markdown-toc {
-    text-transform: capitalize;
-    font-size: 1.1rem;
-    list-style: none;
-    padding: 0;
-
-    > li {
-        font-weight: 700;
+.rpg-site{
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anonymous Pro', sans-serif;
+    font-weight: 700;
     }
 
-    li > ul > li {
-        font-size: 1rem;
-        font-weight: 400;
+    h3 + h4 {
+        margin-top: 0;
     }
 
-    li > ul > li > ul li {
-        font-size: 0.875rem;
-        font-weight: 400;
-            a {
-                box-shadow: none;
-            }
+    .rpg-masthead__title {
+        margin-top: 0;
     }
-}
 
-.rpg-site .main a {
-    border-bottom: none;
-    box-shadow: inset 0 -2px 0 #17e1e3;
-}
+    header.rpg-masthead {
+        border-bottom: 1px solid $grey-color-light;
+    }
 
-.entry h2:first-of-type {
-    margin-top: .5rem;
+    .rpg-masthead__nav,
+    .rpg-masthead__title {
+    float: left;
+    margin-left: 1rem;
+    }
+
+    .rpg-masthead__nav {
+        padding-top: 1rem;
+    }
+
+    #markdown-toc {
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        list-style: none;
+        padding: 0;
+
+        > li {
+            font-weight: 700;
+        }
+
+        li > ul > li {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        li > ul > li > ul li {
+            font-size: 0.875rem;
+            font-weight: 400;
+                a {
+                    box-shadow: none;
+                }
+        }
+    }
+
+    .main a {
+        border-bottom: none;
+        box-shadow: inset 0 -2px 0 #17e1e3;
+    }
+
+    .entry h2:first-of-type {
+        margin-top: .5rem;
+    }
 }
