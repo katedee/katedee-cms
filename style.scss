@@ -3,14 +3,24 @@
 @import "reset";
 @import "bootstrap";
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.clearfix:after {
-    clear: both;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 
@@ -230,6 +240,25 @@ nav {
 }
 
 .portfolio__item {
+  width: 23%;
+  float: left;
+  margin: 1%;
+  position: relative;
+  @extend %clearfix;
+}
+
+.portfolio__item-title {
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  display: inline;
+  background: $teal;
+}
+
+.portfolio__item-image {
+  height: 200px;
+  background-size: cover;
+  background-position: 50% 50%;
 
   &:hover .portfolio__item-image {
     background: -moz-linear-gradient(top, rgba($purple,0) 0%, rgba($purple,0.65) 100%); /* FF3.6+ */
@@ -241,11 +270,11 @@ nav {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
   }
 
-  img {
-    z-index: -1;
-    position: relative;
-    display: block;
-  }
+  // img {
+  //   z-index: -1;
+  //   position: relative;
+  //   display: block;
+  // }
 
   &:hover, &:focus, &:active {
     opacity: 0.7;
