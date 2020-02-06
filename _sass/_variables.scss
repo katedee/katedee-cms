@@ -7,13 +7,13 @@
 
 $teal: #17e1e3;
 $purple: #3C225F;
-$pink: #9a5780;
+$salmon: #F2A99F;
+$salmon-dark: darken($salmon, 20);
 
 $blue: $teal;
 
 // Grays
-$black: #000;
-$darkerGray: #222;
+$black: #20201F;
 $darkGray: #333;
 $gray: #666;
 $med-gray: #999;
@@ -30,6 +30,14 @@ $open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
 $abril: 'Abril Fatface', cursive, serif;
 
 $headings: $abril;
+
+$selection-color: $teal;
+$link-color: $teal;
+$icons-color: $teal;
+
+$gradient-1: $purple;
+$gradient-2: $teal;
+$item-title-color: $teal;
 
 // Mobile breakpoints
 @mixin mobile {

@@ -137,11 +137,11 @@ img {
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
-  background: $pink;
+  background: $selection-color;
 }
 ::selection {
   color: $black;
-  background: $pink;
+  background: $selection-color;
 }
 
 /*********************/
@@ -153,7 +153,6 @@ img {
 
 .masthead {
   padding: 20px 0;
-  text-align: center;
 
   @include sm-and-up {
     a {
@@ -169,8 +168,8 @@ img {
 
   @include sm-and-up {
     font-size: 50px;
-    text-align: right;
     margin-top:3.125rem;
+    margin-left: 20px;
     display: block;
   }
 }
@@ -200,7 +199,6 @@ nav {
   a {
     margin: 0 10px;
     color: $blue;
-    text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
@@ -224,17 +222,17 @@ nav {
 
 .main {
   a {
-    border-bottom: 3px solid $teal;
-    box-shadow: inset 0 -4px 0 $teal;
+    border-bottom: 3px solid $link-color;
+    box-shadow: inset 0 -4px 0 $link-color;
 
     &:hover, &:focus, &:active {
-      background: $teal;
+      background: $link-color;
     }
   }
 }
 
  .heading--gradient {
-    background: -webkit-linear-gradient(bottom, $purple, $teal);
+    background: -webkit-linear-gradient(bottom, $gradient-1, $gradient-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -252,7 +250,7 @@ nav {
   left: -7px;
   top: -7px;
   display: inline;
-  background: $teal;
+  background: $item-title-color;
 }
 
 .portfolio__item-image {
@@ -330,10 +328,20 @@ footer {
   margin-bottom: 20%;
 }
 
+.icons-wrapper {
+  @include sm-and-up {
+    margin-left: 20px;
+  }
+}
 
 .social-icons {
-  fill:  #17e1e3;
+  fill:  $icons-color;
   display: inline-block !important;
+  margin-left: 0;
+
+  @include sm-and-up {
+    margin-top: 20px;
+  }
 }
 
 @import "rpg";
