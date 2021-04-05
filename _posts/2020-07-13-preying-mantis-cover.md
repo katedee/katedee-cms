@@ -5,6 +5,7 @@ date: 2020-07-13T23:29:30.913Z
 thumbnail: /images/image-from-ios-14-.jpg
 categories:
   - illustration
+  - comics
 images:
   - alt: Portfolio image
     url: /images/image-from-ios-14-.jpg
