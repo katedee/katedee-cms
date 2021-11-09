@@ -12,4 +12,4 @@ These are the most recent posts from my <a href="http://katedrwecka.tumblr.com" 
 
 <script src="{{ "/js/tumblr.js" }}"></script>
 
-<script src="http://katedrwecka.tumblr.com/api/read/json?callback=tumblr&amp;num=10" type="text/javascript"></script>
+<script src="https://katedrwecka.tumblr.com/api/read/json?callback=tumblr&amp;num=10" type="text/javascript"></script>
