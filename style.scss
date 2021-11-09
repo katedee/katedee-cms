@@ -147,10 +147,6 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
-
 .masthead {
   padding: 20px 0;
 
@@ -164,9 +160,11 @@ img {
 
 .heading--header {
   line-height: 1;
-  display: none;
+  font-size: 34px;
+  margin-top:0;
 
   @include sm-and-up {
+    max-width:150px;
     font-size: 50px;
     margin-top:3.125rem;
     margin-left: 20px;
@@ -174,31 +172,23 @@ img {
   }
 }
 
-.heading--header-mobile {
-  line-height: 1;
-  display: block;
-
-  @include sm-and-up {
-    display: none;
-  }
-}
 
 nav {
-  float: none;
   margin-top: 9px;
   display: block;
   font-size: 16px;
-
+  a:first-child:not(.social-icons) { margin-left: 0px; }
+  
   @include sm-and-up {
-    float: right;
     margin-top: 23px; 
     font-weight: lighter;
     font-size: 18px;
+    a:first-child:not(.social-icons) { margin-left: 20px; }
   }
 
   a {
     margin: 0 10px;
-    color: $blue;
+    color: $darkGray;
     font-weight: 300;
     letter-spacing: 1px;
 
@@ -207,7 +197,6 @@ nav {
     }
 
     @include sm-and-up {
-      color: $darkGray;
       margin-left: 20px;
     }
 
@@ -237,42 +226,22 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-.portfolio__item {
-  width: 23%;
-  float: left;
-  margin: 1%;
-  position: relative;
-  @extend %clearfix;
-}
+.portfolio {
+  column-count: 2;
+  column-gap: 1em;
 
-.portfolio__item-title {
-  position: absolute;
-  left: -7px;
-  top: -7px;
-  display: inline;
-  background: $item-title-color;
-}
-
-.portfolio__item-image {
-  height: 200px;
-  background-size: cover;
-  background-position: 50% 50%;
-
-  &:hover .portfolio__item-image {
-    background: -moz-linear-gradient(top, rgba($purple,0) 0%, rgba($purple,0.65) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba($purple,0.65)), color-stop(100%,rgba($purple,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba($purple,0) 0%,rgba($purple,0.65) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-  }
-
-  // img {
-  //   z-index: -1;
-  //   position: relative;
-  //   display: block;
+  // @include sm-and-up {
+  //   column-count: 3;
   // }
+
+  @include md-and-up {
+    column-count: 4;
+  }
+}
+
+.portfolio__item {
+  margin: 0 0 1em;
+  width: 100%;
 
   &:hover, &:focus, &:active {
     opacity: 0.7;
@@ -318,17 +287,13 @@ footer {
   }
 }
 
-/* fluid 4 columns */
-.grid-sizer,
-.grid-item { width: 25%; float: left; }
-/* 2 columns */
-.grid-item--width2 { width: 40%; }
-
 .tumblr-post {
   margin-bottom: 20%;
 }
 
 .icons-wrapper {
+  margin-top: 20px;
+
   @include sm-and-up {
     margin-left: 20px;
   }
@@ -338,11 +303,5 @@ footer {
   fill:  $icons-color;
   display: inline-block !important;
   margin-left: 0;
-
-  @include sm-and-up {
-    margin-top: 20px;
-  }
 }
-
-@import "rpg";
 
