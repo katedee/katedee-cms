@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Lovesong
-thumbnail: /images/2014/04/lovesong-628x1024.png
+thumbnail: /images/2014/03/lovesong.png
 categories: illustration
 images:
-    - url: /images/2014/04/lovesong-628x1024.png
+    - url: /images/2014/03/lovesong.png
 
 ---
 

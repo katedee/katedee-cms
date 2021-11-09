@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Message Saved
-thumbnail: /images/2014/03/message1.png
+thumbnail: /images/2014/03/message3.png
 categories: comics
 images:
     - url: /images/2014/03/message1.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Build-a-Bowie
-thumbnail: /images/2014/03/bowie1-1024x481.png
+thumbnail: /images/2014/03/bowie-495x436.png
 categories: illustration
 images:
   - url: /images/2014/03/bowie1-1024x481.png"
