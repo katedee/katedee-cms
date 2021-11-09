@@ -230,10 +230,6 @@ nav {
   column-count: 2;
   column-gap: 1em;
 
-  // @include sm-and-up {
-  //   column-count: 3;
-  // }
-
   @include md-and-up {
     column-count: 4;
   }
