@@ -10,6 +10,9 @@ $purple: #3C225F;
 $salmon: #F2A99F;
 $salmon-dark: darken($salmon, 20);
 
+$darkblue: #221B53;
+$pink: #FF2079;
+
 $blue: $teal;
 
 // Grays
@@ -21,19 +24,14 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$marker: 'Permanent Marker', cursive;
+$varela: 'Varela', sans-serif;
 
-$comforta: 'Comfortaa', cursive, serif;
-$open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
-$abril: 'Abril Fatface', cursive, serif;
-
-$headings: $abril;
+$headings: $marker;
 
 $selection-color: $teal;
 $link-color: $teal;
-$icons-color: $purple;
+$icons-color: $pink;
 
 $gradient-1: $purple;
 $gradient-2: $teal;

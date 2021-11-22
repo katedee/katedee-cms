@@ -10,5 +10,4 @@ Currently Kate is working on a series about an all-girl supernatural detective a
 She has experiences that include coding for companies such as ShopLocket, myPlanet, designing and illustration for FashionEdits, and illustrating for publications such as BKLYNR and HarperTeen.
 
 ### Project? Drop me a line!
-email **[katedrwecka@gmail.com](mailto:katedrwecka@gmail.com)**   
-phone **647-461-7163**
+email **[katedrwecka@gmail.com](mailto:katedrwecka@gmail.com)** 
