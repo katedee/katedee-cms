@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="portfolio clearfix">
+<div class="grid clearfix">
   {% for post in site.posts %}
    {% unless post.categories contains 'rpg' %}
       {% include portfolio-item.html %}

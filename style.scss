@@ -226,18 +226,13 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-.portfolio {
-  column-count: 2;
-  column-gap: 1em;
+.grid-item {
+  width: calc(50% - 10px);
+  margin-bottom: 3px;
 
   @include md-and-up {
-    column-count: 4;
+    width: calc(25% - 10px);
   }
-}
-
-.portfolio__item {
-  margin: 0 0 1em;
-  width: 100%;
 
   &:hover, &:focus, &:active {
     opacity: 0.7;

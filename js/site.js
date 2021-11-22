@@ -1,9 +1,12 @@
-// jQuery(window).on('load', function(){
-//   $('.grid').masonry({
-//     // set itemSelector so .grid-sizer is not used in layout
-//     itemSelector: '.grid-item',
-//     // use element for option
-//     columnWidth: '.grid-sizer',
-//     percentPosition: true
-//   })
-// });
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
+  gutter: 10,
+  percentPosition: true
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
