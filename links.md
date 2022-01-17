@@ -5,6 +5,7 @@ permalink: /links/
 ---
 <div class="links-page">
 <img src="/images/me.png">
+<a class="btn btn-info btn-lg btn-block" href="https://shop.katedee.com/" role="button">Shop</a>
 <a class="btn btn-info btn-lg btn-block" href="https://www.twitch.tv/thisiskatedee" role="button">Twitch</a>
 <a class="btn btn-info btn-lg btn-block" href="https://www.tiktok.com/@thisiskatedee" role="button">Tik Tok</a>
 <a class="btn btn-info btn-lg btn-block" href="https://www.instagram.com/thisiskatedee/" role="button">Instagram</a>
