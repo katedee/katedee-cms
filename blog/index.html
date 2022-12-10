@@ -6,35 +6,59 @@ pagination:
 ---
 
 <div class="grid clearfix">
-  <h1>this is a blog boop...</h1>
-  <ul>
-
+  <h1>Blog</h1>
+  <p>Blog posts coming in April 2023...</p>
 
   {% for post in paginator.posts %}
-  <h1>{{ post.title }}</h1>
-  <div>{{post.content}}</div>
-{% endfor %}
-  </ul>
+    <div class="blog-post col-sm-7">
+      <h2>{{ post.title }}</h2>
+      <p class="date"> Written on {{ post.date | date: "%B %e, %Y" }}</p>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="date"> Link to the post (in case you'd like to share)</a>
+      <div>{{post.content}}</div>
+    </div>
+  {% endfor %}
 
 
   <!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
+  {% if paginator.total_pages > 1 %}
+    <div class="col-sm-12 pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+          </svg>
+          <span class="visually-hidden">Previous</span>
+        </a>
+      {% else %}
+        <span class="previous">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+          </svg>
+          <span class="visually-hidden">Previous</span>
+        </span>
+      {% endif %}
+      
+      <span class="page_number ">
+        <span class="visually-hidden">Page </span> {{ paginator.page }} / {{ paginator.total_pages }}
+      </span>
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+          </svg>
+          <span class="visually-hidden">Next</span>
+        </a>
+      {% else %}
+        <span class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+          </svg>
+          <span class="visually-hidden">Next</span>
+        </span>
+      {% endif %}
+    </div>
   {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
 </div>
 
 

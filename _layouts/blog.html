@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="row">
+    <div class="blog-post blog-post--single col-sm-7">
+        <h2>{{ page.title }}</h2>
+        <p class="date"> Written on {{ page.date | date: "%B %e, %Y" }}</p>
+        <div>{{content}}</div>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="date"> Link to the post (in case you'd like to share)</a>
+    </div>
+</article>

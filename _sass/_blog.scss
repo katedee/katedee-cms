@@ -1,0 +1,38 @@
+.blog-post {
+    background: rgba(255,255,255,0.9);
+    margin: 2% 0;
+    padding: 2%;
+    padding-top: 1%;
+    color: #2c2c2c;
+
+    a {
+        color: #2c2c2c;
+    }
+
+    h2 {
+        margin-top: 0; 
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+
+    .next, .previous {
+        svg {
+            width: 25px;
+        }
+    }
+    .page_number {
+        font-size: 0.85rem;
+        margin-top: -10px;
+    }
+
+    span > svg {
+        opacity: 0.2;
+    }
+}

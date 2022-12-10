@@ -34,13 +34,14 @@ collections:
           - {label: Alt Text, name: alt, widget: string, default: 'Portfolio image'}
   - name: 'blog'
     label: 'Blog Post'
-    folder: '_posts/blog/'
+    folder: 'blog/_posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+      - { label: 'Category', name: 'categories', widget: 'hidden', default: 'blog' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
