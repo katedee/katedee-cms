@@ -6,7 +6,7 @@
 name: Kate Dee
 
 # Short bio or description (displayed in the header)
-description: Illustrator and developer based in Ottawa, ON
+description: Illustrator and developer based in Montreal, QC
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 # avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -77,6 +77,18 @@ sass:
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 3
+  sort_reverse: true
+  sort_field: 'date'
+  title: ':title'
+  trail:
+    before: 2
+    after: 2
+
 
 # Exclude these files from your production _site
 exclude:
