@@ -16,4 +16,4 @@ images:
   - alt: Portfolio image
     url: https://pbs.twimg.com/media/Exq8DrUW8AIKn1v.jpg
 ---
-"Preying Mantis", an erotic thriller about a female serial killer in love.
+"Preying Mantis", an erotic thriller about a female serial killer murder tech dudes and finding love along the way.
